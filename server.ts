@@ -19,7 +19,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const SECRET_CHAIN_ID = process.env.CHAIN_ID || "secret-4";
-const SECRET_LCD = process.env.LCD || "https://lcd.mainnet.secretsaturn.net";
+const SECRET_LCD = process.env.LCD_NODE || "https://lcd.mainnet.secretsaturn.net";
 
 const faucetAmount = process.env.FAUCET_AMOUNT || "10000";
 const faucetDenom = process.env.FAUCET_DENOM || "uscrt";
