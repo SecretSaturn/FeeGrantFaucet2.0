@@ -10,7 +10,6 @@ import {
 } from "secretjs";
 import { Timestamp } from "secretjs/dist/protobuf/google/protobuf/timestamp";
 import { QueryAllowanceResponse } from "secretjs/dist/grpc_gateway/cosmos/feegrant/v1beta1/query.pb";
-import { BasicAllowance } from "secretjs/dist/protobuf/cosmos/feegrant/v1beta1/feegrant";
 
 dotenv.config();
 
