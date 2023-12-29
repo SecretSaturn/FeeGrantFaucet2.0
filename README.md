@@ -30,7 +30,10 @@ Install the necessary Node.js dependencies:
 ```npm install```
 
 ### Configure Environment Variables
-Create a .env file in the root of the project directory. Use the .env.sample provided in the repository as a reference and fill in the necessary details.
+Create a .env file in the root of the project directory. 
+Use the .env.sample provided in the repository as a reference and fill in the necessary details.
+
+Don't forget to fill up your Faucet with SCRT.
 
 ### Run the Application
 Start the application:
