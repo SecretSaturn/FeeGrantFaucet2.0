@@ -148,17 +148,16 @@
       if (address) {
         showLoading(true);
         fetch('/claim/' + address)
-          .then(response => response.json())
-          .then(response => {
+        .then(response => {
             if (!response.ok) {
               throw new Error('Server responded with error ' + response.error);
             }
-            return response;
+            return response.json();
           })
           .then(data => {
             showLoading(false);
-            console.log('Response Data:', data); 
-            responseDiv.textContent = 'Claim: ' + data;
+            console.log('Response Data:', JSON.stringify(data)); 
+            responseDiv.textContent = 'Claim: ' + JSON.stringify(data);
             responseDiv.style.color = '#72f1b8';
           })
           .catch(error => {
