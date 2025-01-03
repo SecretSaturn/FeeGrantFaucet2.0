@@ -106,7 +106,7 @@ app.get("/claim/:address", async (req, res) => {
         }
       }).catch(async (e) => {
         try {
-        if (e.code === 13 && e.message === "fee-grant not found: unauthorized") {
+        if (e.code === 13 && e.message === "fee-grant not found: not found") {
           console.log("new feegrant", address);
 
           const feeGrant = await giveFeeGrant(secretjs, address, false);
