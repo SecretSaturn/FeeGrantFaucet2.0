@@ -106,7 +106,8 @@ app.get("/claim/:address", async (req, res) => {
         }
       }).catch(async (e) => {
         try {
-        if (e.code === 13 && e.message === "fee-grant not found: not found") {
+        // newer nodes answer code 2 "rpc error: ... fee-grant not found: not found: unknown request"
+        if (String(e?.message ?? "").includes("fee-grant not found")) {
           console.log("new feegrant", address);
 
           const feeGrant = await giveFeeGrant(secretjs, address, false);
